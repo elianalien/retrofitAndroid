@@ -40,6 +40,65 @@ public class Product {
     @Expose
     public String category;
 
+
+    // getter and setter
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Integer getPriceNew() {
+        return priceNew;
+    }
+
+    public void setPriceNew(Integer priceNew) {
+        this.priceNew = priceNew;
+    }
+
+    public Integer getPriceOld() {
+        return priceOld;
+    }
+
+    public void setPriceOld(Integer priceOld) {
+        this.priceOld = priceOld;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+
     public interface API{
         @GET("catalog")
         Call<ResultData> catalog();
@@ -48,6 +107,7 @@ public class Product {
     public void printData(){
         Log.d("product", name);
         Log.d("product", id);
+        Log.d("product", picture);
         Log.d("product", ""+priceNew);
         Log.d("product", category);
         Log.d("product", description);
